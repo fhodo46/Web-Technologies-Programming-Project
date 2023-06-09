@@ -5,7 +5,7 @@ It first starts with an interactive login system, similar to that of EIS. Howeve
 
 After the student logs in, he/she sees his corresponding student site, where he/she can check his grades, find information about jobs, see the courses he has taken and will retake/take next year,  his attendance, transcript, as well as his financial status about the tuitions he has to pay for it, if any. Some more functionalities of the student include applying for additional exams (in case he has not succeeded from a course in his Bachelor studies and he/she wants to try it again after the duration of the study program), seeing the timetable (for both transport/lecture hours), booking a private transportation schedule, etc.
 
-About the teacher, it is slightly different from the student in that that its functionalities differ. He approves student requests and makes statistics about their. The teacher does not know the student codes (for midterms and finals), so he does that with exam codes. This process is done anonymously and the teacher is not supposed to know the name of the student he/she assigns the grade to.
+About the teacher, it is slightly different from the student in that that its functionalities differ. He approves student requests and makes statistics about their grades. The teacher does not know the student codes (for midterms and finals), so he does that with exam codes. This process is done anonymously and the teacher is not supposed to know the name of the student he/she assigns the grade to.
 
 The advisor has the highest priority. His task is to accept requests coming from both the teacher and the student.
 
