@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CEN-B</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="alert alert-secondary" role="alert" style="width: 506px; height: 60px; margin-left: 120px; margin-top: 10px;">
+        <i class="fa fa-home"></i><a href="teacher.html" style="color: black;"> Home</a> > <i class="fa fa-book"></i><a href="studentattendance.html" style="color: black;"> My Courses and Attendance</a> > <i class="fa fa-podcast"></i><a href="teacherprofile.html" style="color: black;"> My Profile</a>
+    </div>
+
+    <div class="accordion" id="accordionExample" style="margin-left: 20px; width: 640px; height: 60px;">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree" style="background-color: orange;">
+                    <i class="fa fa-book"></i><span style="margin-left: 6px;">CEN 311</span>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <div class="alert alert-success" role="alert">
+                        <b>WEB TECHNOLOGIES AND PROGRAMMING/CEN B</b><br><br><br>
+                        Compulsory | Spring 2022-2023 | Özcan Asılkan
+                    </div>
+
+                    <button style="margin-left: 4.5px; background-color: red;" id="studentbutton2">Students</button>
+                    <button style="margin-left: 12px; background-color: mediumorchid;" id="gradebutton2">Grade Book</button>
+                    <button style="margin-left: 344px; background-color: sienna;" onclick="window.print()">Print</button>
+                    <p id="paragraph2" style="display: none;">1.Albi Zenelaj<br>2.Anri Shahini<br>3.Aurind Meta
+    <br>4.Brend Zmijanej<br>5.Dajana Kokomani<br>6.Dejvi Mulaj<br>7.Elis Brahaj
+    <br>8.Geldi Xhafaj<br>9.Indrit Vani<br>10.Jani Kurmaku<br>11.Jetmir Bathorja<br>12.Katia Profka<br>
+    13.Kejsi Doku<br>14.Megi Dervishi<br>15.Olga Kolaj<br>16.Xhulio Kreku</p>
+                    <p id="anotherparagraph2" style="display: none;">1. Exam ID fd9wR, 15 points.<br>2. Exam ID M89X6, 4 points.<br>3. Exam ID Zuk78, 82 points.<br>4. Exam ID CIsmv, 81 points.<br>5. Exam ID PdQES, 97 points.<br>6. Exam ID s6ynh, 91 points.<br>7. Exam ID AlL2r, 85 points.<br>8. Exam ID xmWQ6, 62 points.<br>9. Exam ID jrO8H, 60 points.<br>10. Exam ID rNKyP, 72 points.<br>11. Exam ID 2UG2X, 100 points.<br>12. Exam ID fzlJl, 64 points.<br>13. Exam ID 12gcp, 58 points.<br>14. Exam ID wHdiw, 45 points.<br>15. Exam ID 7xJFK, 36 points.<br>16. Exam ID sLPv8, 81 points.</p>
+                </div>
+            </div>   </div>  </div>
+
+    <img src="cengroupb.jpg" style="margin-left: 810px; width: 460px; height: 160px;">
+    <br> <br>
+    <br> <br>  
+    <img src="schooltime.jpg" width="590" height="320" style="margin-left:810px;"> <br> <br> <br>
+    <button onclick="gototeacherpagecenb()" style="margin-left: 1210px; margin-bottom:10px;">Go to teacher's page</button> </body>
+
+
+
+
+
+
+    
+<script>
+    $(document).ready(function() {
+        $("#studentbutton2").click(function() {
+            $("#paragraph2").toggle();
+        });
+    });
+
+    $(document).ready(function() {
+        $("#gradebutton2").click(function() {
+            $("#anotherparagraph2").toggle();
+        });
+    });
+
+    function gototeacherpagecenb() {
+        location.replace("teacher.html");
+    }
+</script>
+
+</html>
