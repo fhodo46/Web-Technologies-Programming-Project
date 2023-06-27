@@ -1,0 +1,277 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+  <title> Student EIS</title>
+  <style>
+    .sidebar {
+      background-color: #f8f9fa;
+      height: 100vh;
+    }
+
+    .sidebar-heading {
+      font-weight: bold;
+      padding: 20px;
+      margin-bottom: 0;
+      background-color: #007bff;
+      color: #fff;
+    }
+
+    .nav-link {
+      padding: 10px 20px;
+      color: #000;
+    }
+
+    .nav-link:hover {
+      background-color: #dee2e6;
+    }
+
+    .profile-button {
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+
+
+
+
+
+
+    nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+    
+  </style>
+</head>
+<body>  
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 p-0">
+        <div class="sidebar">
+          <h5 class="sidebar-heading"> Welcome, Corina</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" href="studentpage.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profile.html">My Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="courses.html">Selected Courses</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="grades.html">Interim Grades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="attendance.html">Attendance</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="transcript.html">Transcript</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://epoka.edu.al/timetable">Timetable</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="courseselection.html">Course Selection</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="finance.html">Finance</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" href="https://epoka.edu.al/mat/student_guide/2022/Student_Guide_2022_2023.pdf">Student Guide</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="changelogs.html">Changelog v.2.2.15</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="d-flex">
+              <button class="profile-button" style="background-color: blue; width: 220px; height: 100px; font-size: 40px; font-family: Trebuchet MS; margin-right: 10px;" onclick="gotoprofile()">
+                <i class="fas fa-home"></i> Profile
+              </button>
+              <button class="another-button" style="background-color: lime; width: 220px; height: 100px; font-size: 40px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 20px;" onclick="gotocourses()">
+                <i class="fa fa-check"> </i>
+                Courses
+              </button>
+              <button class="another-button" style="background-color: lime; width: 220px; height: 100px; font-size: 40px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 20px;" onclick="gotogrades()">
+                <i class="fa fa-book"> </i>
+                Grades
+              </button>
+              <button class="another-button" style="background-color: lime; width: 220px; height: 100px; font-size: 25px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 20px;" onclick="gotocoursetips()">
+                <i class="fa fa-file"> </i>
+                Course Selection Tips
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+              <div class="d-flex">
+                <button onclick="attendance()" class="profile-button" style="background-color: purple; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-right: 10px; margin-top: 60px;">
+                  <i class="far fa-check-square"></i> Attendance
+                </button>
+                <button onclick="gotocourseselection()" class="another-button" style="background-color: orange; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;">
+                  <i class="fa fa-file"> </i>
+                  Course Selection
+                </button>
+                <button onclick="gotoadddocuments()" class="another-button" style="background-color: purple; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;">
+                  <i class="far fa-file"> </i>
+                  Document Requests
+                </button>
+                <button onclick="gotoadditionalregistration()" class="another-button" style="background-color: orange; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;">
+                  <i class="far fa-file"> </i>
+                  Additional Registration
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="d-flex">
+                <button onclick="gotoresitapplication()" class="profile-button" style="background-color: brown; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-right: 10px; margin-top: 60px;">
+                  <i class="far fa-file"></i> Resit Application
+                </button>
+                <button class="another-button" style="background-color: blue; width: 220px; height: 100px; font-size: 40px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;" onclick="gotofinance()">
+                  <i class="fa fa-dollar"> </i>
+                  Finance
+                </button>
+                <button class="another-button" style="background-color: cyan; width: 220px; height: 100px; font-size: 40px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;" onclick="gotocovid()">
+                  <i class="far fa-medkit"> </i>
+                  Covid
+                </button>
+                <button class="another-button" style="background-color: orange; width: 220px; height: 100px; font-size: 24px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;" onclick="gotojobapplication()">
+                  <i class="far fa-book"> </i>
+                  Job Vacant Places Information
+                </button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="d-flex">
+                <button onclick="gototransport()" class="profile-button" style="background-color: orange; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-right: 10px; margin-top: 60px;">
+                  <i class="fa fa-road"></i> Transport
+                </button>
+                <button onclick="gotostudentguide()"class="profile-button" style="background-color: purple; width: 220px; height: 100px; font-size: 30px; font-family: Trebuchet MS; margin-left: 46px; margin-top: 60px;">
+                    <i class="far fa-file"></i> Student Guide
+                  </button>
+
+                  <div style="margin-top: 60px; margin-left: 120px;">
+                    <p style="font-size: 30px;">Exam ID:</p>
+                    <p style="margin-top: 20px; font-size: 30px;"><b>1B2jy</b></p>
+                  </div>
+
+                  
+              </div>
+            </div>
+          </div>
+
+
+          <br> <br> <br>
+          <div class="row">
+            <div class="col-md-12">
+              <nav>
+                <ul>
+                    <button onclick="viewepokaclubs()" style="background-color: rgb(248, 90, 187)">  See GDSC Club here </button>  
+                    
+                    <button onclick="logout()" style="background-color: rgb(248, 90, 187)"> Log out</button>
+                    
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+      
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function viewepokaclubs(){
+  location.replace("https://gdsc.community.dev/epoka-university/");
+}
+
+
+function logout(){
+  location.replace("web project login.html");
+}
+
+function attendance(){
+  location.replace("attendance.html");
+}
+
+
+function gotoprofile(){
+  location.replace("profile.html");
+}
+
+function gotocourses(){
+  location.replace("courses.html");
+}
+
+
+function gotogrades(){
+  location.replace("grades.html");
+}
+
+function gotocourseselection(){
+  location.replace("courseselection.html");
+}
+
+function gotostudentguide(){
+location.replace("https://epoka.edu.al/mat/student_guide/2022/Student_Guide_2022_2023.pdf");  }
+
+function gototransport(){
+location.replace("transport.html");  }
+
+function gotoresitapplication(){
+window.alert("Resit application has not started yet!");  }
+
+function gotocoursetips(){
+location.replace("coursetips.html");}
+
+
+
+
+function gotofinance(){
+location.replace("finance.html");}
+
+
+
+function gotocovid(){
+location.replace("covid.html");}
+
+
+function gotojobapplication(){
+  location.replace("jobinformation.html");
+} 
+
+function gotoadddocuments(){
+  location.replace("adddocument.html");
+} 
+
+
+function gotoadditionalregistration(){
+  location.replace("additionalexam.html");
+} 
+
+
+  </script>
+</body>  </html>

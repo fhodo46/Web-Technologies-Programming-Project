@@ -1,0 +1,94 @@
+<html>
+    <head>  
+        <link rel="stylesheet"  href="style.css">  <title> Login</title>
+        <script>
+
+
+     
+function validatepage(){
+
+var emailchecker= document.getElementById("email");
+var passwordchecker= document.getElementById("passw");
+var gmail="cjoines21@epoka.edu.al";      
+var emailmatches= emailchecker.value.match(gmail);
+var regex = /^\d{6,}/;
+var passwordmatches= passwordchecker.value.match(regex);
+
+
+var email2=document.getElementById("email");
+var password2= document.getElementById("passw");
+var gmail2="agjerazi@epoka.edu.al";
+var regex2=/^\d{6,}/;
+
+
+var email2matches=email2.value.match(gmail2);
+var password2matches=password2.value.match(regex2);
+
+
+
+
+var email3=document.getElementById("email");
+var password3= document.getElementById("passw");
+var gmail3="hgjoka@epoka.edu.al";
+var regex3=/^\d{6,}/;
+
+
+var email3matches=email3.value.match(gmail3);
+var password3matches=password3.value.match(regex3);
+
+
+
+      if((emailmatches && passwordmatches))
+      {
+        location.replace("studentpage.html");
+   } 
+   else if(email2matches && password2matches){
+   location.replace("advisor.html");}
+
+
+
+
+
+
+   else if(email3matches && password3matches){
+   location.replace("teacher.html");}
+
+  else if((emailmatches && !passwordmatches) || (email2matches && !password2matches) || (email3matches && !password3matches)){
+    window.alert("Password is wrong");
+   } 
+   else if((!emailmatches && passwordmatches) || (!email2matches && password2matches) || (!email3matches && password3matches)){
+    window.alert("Email is wrong");
+   } 
+   else {
+    window.alert("Both fields are empty or they are wrongly entered");
+   }  
+  
+  
+  
+  }  
+        </script>
+    </head>
+
+
+    <body>
+             <h1 class="onlycursivetext"> Welcome to Epoka University! </h1>
+
+
+             <img src="img.jpg" width="530" height="300"> 
+            <img class="position1" src="img3.jpg" width="530" height="300"> <br> <br>
+             <img src="img2.jpg" width="530" height="310">
+             
+             <img class="position2" src="img4.jpg" width="530" height="310"> 
+        <div class="logintext"> <h2> Login </h2></div>
+
+        <div class="username"> <h2> Username/Email: </h2></div>
+
+        <div class="firstinput"> <input type="email" id="email"> </div>
+        <div class="password"> <h2> Password: </h2></div>
+
+        <div class="secondinput"> <input type="password" id="passw"> </div>
+        <div class="loginbutton"> <button style="background-color: rgb(239, 181, 72); border-radius: 10px; width:81px; height:36px; font-size:18px; font-family: Trebuchet MS;" onclick="validatepage();"> Login</button> </div>
+            
+       
+    </body>
+</html>
