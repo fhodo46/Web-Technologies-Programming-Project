@@ -1,0 +1,157 @@
+<html>
+    <head>  <title>Top Students</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    </head>
+    
+    <body>  
+
+        <h1 style="margin-left:610px; margin-top:10px; font-family: Tahoma;" > Top Students</h1> <br>
+
+        <p style="margin-left:20px; width:1501px;"> <i>  The rector of the university, Mr. Ahmet Öztaş, is happy to announce that there are 124 students out of 362
+            who have a GPA of 3.0 or higher in the second year. All of these are eligible to do a Graduation Project
+            instead of a Final Comprehensive Exam next year, if they keep their cumulative GPA even in the first
+            semester of the third year. Here are the top 6 ones. (The first student that appears is not the 
+            best academically performing one, they are selected from a group of students that have a GPA
+            of 3.50 or higher.)</i></p> <br>
+   
+        <div class="container" style="width:100%; margin-left:81px;">
+            <div class="row g-3">
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="xhesibazephoto.jpg" class="card-img-top" width="180" height="180">
+                        <div class="card-body">
+                            <h5 class="card-title">Xhesi Baze</h5>
+                            <p class="card-text">A young person who is ambitious and full of life. She has a warm smile that makes any space she enters feel welcoming. 
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="fatjonhodo.jpg" class="card-img-top" width="180" height="180">
+                        <div class="card-body">
+                            <h5 class="card-title">Fatjon Hodo</h5>
+                            <p class="card-text">A kind-hearted person who helps his friends and programs in different languages. Likes math, so he chose Software Engineering.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="endiguri.jpg" class="card-img-top" width="180" height="180">
+                        <div class="card-body">
+                            <h5 class="card-title">Endi Guri</h5>
+                            <p class="card-text">A person who is reliable at work. Communicates well with his teammates and aces the projects.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-12 col-md-4 col-lg-2">
+                    <div class="card">
+                        <img src="alesiabitri.jpg" class="card-img-top" width="180" height="180">
+                        <div class="card-body">
+                            <h5 class="card-title"> Alesia Bitri</h5>
+                            <p class="card-text"> A funny person. Her passion of travel and adventure is a clear indication of her adventurous nature. 
+                                She enjoys gathering information about other people's cultures, eating new foods, and embracing unusual experiences.
+                            </p>
+                            
+                        </div>
+                    </div>  </div>
+
+
+
+
+                    <div class="col-12 col-md-4 col-lg-2">
+                        <div class="card">
+                            <img src="klajdishehu.png" class="card-img-top" width="180" height="180">
+                            <div class="card-body">
+                                <h5 class="card-title"> Klajdi Shehu</h5>
+                                <p class="card-text"> 
+                                    On the field, this boy's enthusiasm and spirit of competition are obvious. He practices with a commitment to the sport. On the whole, he emphasizes collaboration, discipline, and sportsmanship. </p>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="col-12 col-md-4 col-lg-2" >  <div class="card">
+                            <img src="kleamingaphotooooo.png" class="card-img-top" width="180" height="180"> <div class="card-body">  <h5 class="card-title"> Klea Minga</h5>  <p class="card-text"> Her passion for all kinds of art reflects her vivacious personality. She effortlessly brings her ideas to life with a paintbrush or a pen in hand, allowing her creativity to flourish. She loves self-expression as a means of sharing her opinions, whether it be writing, dance, or painting.</p>
+                                </div>  </div>
+                    </div>
+            </div>
+        </div>
+    
+
+
+   <br> <br> <br>
+
+
+ 
+   <p style="margin-left:26.5px; font-size:24px; width:1481px;"> Want to know more about the top 31 students? Click the
+    
+    "Show Students" to find out. To remove that information again, click "Hide Student Information". But you cannot do
+    
+    it directly. Go to an application that uses Apache to see it.</p> <br>
+
+    <button style="background-color:rgb(44, 194, 44); margin-left:460px;" onclick="fetchthedata()">  Show Students</button>
+    <button style="background-color:rgb(214, 153, 23); margin-left:271px;" onclick="unfetchthedata()">  Hide Student Information</button>
+    <div id="info">  </div>
+   <button onclick="gotothepageofadvisor()" style="margin-left:1310px;">  Go to the advisor's page</button>
+    </body>
+
+
+    <script>
+
+        function gotothepageofadvisor(){
+            location.replace("advisor.html");
+        } 
+          function fetchthedata(){
+            const xhr= new XMLHttpRequest();
+            xhr.open('GET','topundergraduates.txt',true);
+            xhr.onload= function(){
+                if(xhr.status===200){
+                    document.getElementById('info').innerHTML= xhr.responseText;
+                }
+                else{
+                    console.log('Error', xhr.status);
+                }
+            };
+            xhr.send(); 
+        } 
+
+
+
+
+
+
+        function unfetchthedata(){
+            document.getElementById('info').innerHTML='';
+        } 
+    </script>
+</html>
